@@ -1,0 +1,14 @@
+<main *ngIf="loadCompleted">
+  <h1 class="main-heading">{{user.name}}, you got {{pokemon.name | uppercase }}!</h1>
+
+  <app-pokemon
+    [pokemon]="pokemon"
+  ></app-pokemon>
+
+  <button 
+    mat-stroked-button
+    (click)="onClick()"
+  >
+    Go back
+  </button>
+</main>

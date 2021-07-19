@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Righteous";
+  src: url(/assets/Righteous-Regular.ttf) format("truetype");
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #E8F6EF;
+  color: #4C4C6D;
+  margin: 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 30px auto;
+  overflow: auto;
+  height: 80%;
+}
