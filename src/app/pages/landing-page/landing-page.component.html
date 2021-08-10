@@ -1,42 +1,12 @@
 <main>
-  <h1 class="main-heading">Hello Pokémon trainer!</h1>
-  <h2 class="sub-heading">Enter your name and age to get a Pokémon</h2>
+  <h1 class="main-heading">Welcome to the world of Pokémon!</h1>
+  <h2 class="sub-heading">Login below to experience it</h2>
 
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label for="name">Name</mat-label>
-        <input 
-          type="text" 
-          name="name" 
-          formControlName="name" 
-          id="name" 
-          matInput
-        >
-        <mat-error *ngIf="checkError('name', 'required')">Name is required</mat-error>
-      </mat-form-field>
-    </div>
-
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label for="age">Age</mat-label>
-        <input 
-          type="text" 
-          name="age" 
-          formControlName="age" 
-          id="age" 
-          matInput
-        >
-        <mat-error *ngIf="checkError('age', 'required')">Age is required</mat-error>
-      </mat-form-field>
-    </div>
-
-    <button 
-      mat-stroked-button
-      type="submit"
-      [disabled]="!userForm.valid"
-    >
-      Get Pokémon!
-    </button>
-  </form>
+  <button
+    class="btn" 
+    mat-stroked-button
+    (click)="onLogin()"
+  >
+    Login
+  </button>
 </main>

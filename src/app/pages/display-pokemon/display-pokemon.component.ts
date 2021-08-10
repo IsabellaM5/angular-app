@@ -14,6 +14,7 @@ export class DisplayPokemonComponent implements OnInit {
   pokemon: Pokemon;
   user: any;
   loadCompleted: boolean = false;
+  showDetails: boolean = false;
 
   constructor(private pokemonService: PokemonService, private userService: UserService, private router: Router) { }
 
@@ -38,7 +39,11 @@ export class DisplayPokemonComponent implements OnInit {
     this.user = this.userService.userInfo;
   }
 
-  onClick() {
+  onMoreDetails() {
+    this.showDetails = true;
+  }
+
+  onGoBack() {
     this.router.navigateByUrl('/');
   }
 }

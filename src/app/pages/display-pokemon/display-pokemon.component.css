@@ -12,3 +12,17 @@ main {
 .main-heading {
   font-family: "Righteous";
 }
+
+.more-details {
+  text-decoration: none;
+  font-family: "Righteous";
+  font-size: 18px;
+  color: #4C4C6D;
+  margin-bottom: 40px;
+}
+
+.more-details:hover {
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}

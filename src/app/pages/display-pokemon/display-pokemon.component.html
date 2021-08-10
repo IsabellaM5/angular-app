@@ -1,14 +1,25 @@
 <main *ngIf="loadCompleted">
-  <h1 class="main-heading">{{user.name}}, you got {{pokemon.name | uppercase }}!</h1>
+  <h1 class="main-heading">
+    {{ user.name }}, you got {{ pokemon.name | uppercase }}!
+  </h1>
 
-  <app-pokemon
-    [pokemon]="pokemon"
-  ></app-pokemon>
+  <app-pokemon [pokemon]="pokemon"></app-pokemon>
+
+  <a 
+    *ngIf="!showDetails; else showPokemonDetails"
+    class="more-details" 
+    (click)="onMoreDetails()"
+  >
+    More details on {{ pokemon.name | titlecase }}
+  </a>
+  <ng-template #showPokemonDetails>
+    <app-pokemon-details [pokemon]="pokemon"></app-pokemon-details>
+  </ng-template>
 
   <button 
     mat-stroked-button
-    (click)="onClick()"
+    (click)="onGoBack()"
   >
-    Go back
+    Log out
   </button>
 </main>

@@ -8,15 +8,19 @@ import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { PokemonFormComponent } from './pages/pokemon-form/pokemon-form.component';
 import { DisplayPokemonComponent } from './pages/display-pokemon/display-pokemon.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
+    PokemonFormComponent,
     DisplayPokemonComponent,
-    PokemonComponent
+    PokemonComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
