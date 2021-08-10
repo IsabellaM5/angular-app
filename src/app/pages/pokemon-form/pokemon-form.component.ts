@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { UserService } from '../../services/user.service';
@@ -10,19 +10,14 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./pokemon-form.component.css']
 })
 export class PokemonFormComponent implements OnInit {
-  public userForm: FormGroup;
+  userForm = this.fb.group({
+    name: new FormControl('', [Validators.required]),
+    age: new FormControl('', [Validators.required])
+  });
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.initializeForm();
-  }
-
-  initializeForm(): void {
-    this.userForm = this.fb.group({
-      name: new FormControl('', [Validators.required]),
-      age: new FormControl('', [Validators.required])
-    });
   }
 
   public checkError = (controlName: string, errorName: string) => {
@@ -34,7 +29,6 @@ export class PokemonFormComponent implements OnInit {
     this.router.navigateByUrl('pokemon');
     console.log(this.userForm.value);
     this.userForm.reset({'name': '', 'age': ''});
-
     console.log(this.userForm.value);
   }
 }
