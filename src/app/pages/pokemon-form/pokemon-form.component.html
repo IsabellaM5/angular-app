@@ -1,10 +1,6 @@
 <main>
-  <h1 class="main-heading">Hello there!</h1>
-
-  <div class="container-sub-headings">
-    <h2 class="sub-heading">So you want to be a Pokémon trainer eh?</h2>
-    <h2 class="sub-heading">Enter your name and age below to get a Pokémon</h2>
-  </div>
+  <h1 class="main-heading">So you want to be a Pokémon trainer eh?</h1>
+  <h2 class="sub-heading">Enter your name and age below to get a Pokémon</h2>
 
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div>
@@ -36,11 +32,12 @@
     </div>
 
     <button 
+      class="btn"
       mat-stroked-button
       type="submit"
       [disabled]="!userForm.valid"
     >
-      Get Pokémon!
+      GET POKÉMON!
     </button>
   </form>
 </main>

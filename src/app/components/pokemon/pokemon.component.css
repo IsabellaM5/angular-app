@@ -5,6 +5,20 @@
 }
 
 .pokemon-img {
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .pokemon-img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pokemon-img {
+    height: 400px;
+    width: 400px;
+  }
 }

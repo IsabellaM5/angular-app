@@ -1,12 +1,21 @@
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #4C4C6D;
-  border-radius: 5px;
-  padding: 7vh;
-  height: 80%;
+:host {
+  width: 100%;
+}
+
+.main-heading, .sub-heading {
+  font-family: "Righteous";
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 28px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 form {
@@ -15,15 +24,31 @@ form {
   align-items: center;
 }
 
-.main-heading, .sub-heading {
-  font-family: "Righteous";
+.btn {
+  margin-top: 40px;
+  font-size: 16px;
 }
 
-.container-sub-headings {
-  margin: 40px 0px;
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  
+  .sub-heading {
+    font-size: 24px;
+  }
 }
 
-.sub-heading {
-  margin: 0;
-  text-align: center;
+@media (min-width: 1200px) {
+  .main-heading {
+    font-size: 36px;
+  }
+  
+  .sub-heading {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
 }

@@ -3,20 +3,39 @@
   src: url(/assets/Righteous-Regular.ttf) format("truetype");
 }
 
-html, body { 
-  height: 100%; 
-}
-
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: #E8F6EF;
   color: #4C4C6D;
   margin: 0;
 }
 
 .container {
-  max-width: 80%;
-  margin: 30px auto;
-  overflow: auto;
-  height: 80%;
+  height: 100vh;
+  background: #E8F6EF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #E8F6EF;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    background: #318058;
+  }
+
+  main {
+    min-height: 90vh;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 7px 7px 20px 0px rgb(0 0 0 / 20%);
+  }
 }
