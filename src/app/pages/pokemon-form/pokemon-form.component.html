@@ -20,13 +20,14 @@
     <mat-form-field appearance="outline">
       <mat-label for="age">Age</mat-label>
       <input 
-        type="text" 
+        type="number" 
         name="age" 
         formControlName="age" 
         id="age" 
         matInput
       >
       <mat-error *ngIf="checkError('age', 'required')">Age is required</mat-error>
+      <mat-error *ngIf="checkError('age', 'max')">You're not that old</mat-error>
     </mat-form-field>
   </div>
 

@@ -12,7 +12,7 @@ import { UserService } from '../../services/user.service';
 export class PokemonFormComponent implements OnInit {
   userForm = this.fb.group({
     name: new FormControl('', [Validators.required]),
-    age: new FormControl('', [Validators.required])
+    age: new FormControl('', [Validators.required, Validators.max(150)])
   });
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
@@ -25,10 +25,8 @@ export class PokemonFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.userInfo = this.userForm.value;
+    this.userService.setUserInfo(this.userForm.value);
     this.router.navigateByUrl('pokemon');
-    console.log(this.userForm.value);
     this.userForm.reset({'name': '', 'age': ''});
-    console.log(this.userForm.value);
   }
 }

@@ -1,5 +1,5 @@
 <div class="container-pokemon-details">
-  <p class="pokemon-details">Type: {{ pokemon.types[0].type.name | titlecase }}</p>
+  <p class="pokemon-details">Type(s): <span *ngFor="let type of pokemon.types">{{ type.type.name | titlecase }} </span></p>
   <p class="pokemon-details">Height: {{ pokemon.height }}</p>
   <p class="pokemon-details">Weight: {{ pokemon.weight }}</p>
 </div>

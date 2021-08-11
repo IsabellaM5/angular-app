@@ -4,7 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  userInfo: any;
+  private userInfo: any;
 
   constructor() { }
+
+  setUserInfo(userInfo: any) {
+    this.userInfo = userInfo;
+  }
+
+  getUserInfo() {
+    return this.userInfo;
+  }
 }
