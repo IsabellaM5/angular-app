@@ -1,4 +1,7 @@
-<main *ngIf="loadCompleted">
+<div 
+  *ngIf="loadCompleted"
+  class="content-container"
+>
   <h1 class="main-heading">
     {{ user.name }}, you got {{ pokemon.name | uppercase }}!
   </h1>
@@ -23,4 +26,4 @@
   >
     LOG OUT
   </button>
-</main>
+</div>
