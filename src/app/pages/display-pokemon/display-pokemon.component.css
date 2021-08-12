@@ -33,10 +33,6 @@
   cursor: pointer;
 }
 
-.btn {
-  font-size: 16px;
-}
-
 @media (min-width: 768px) {
   .main-heading {
     font-size: 32px;
@@ -54,9 +50,5 @@
 
   .more-details {
     font-size: 28px;
-  }
-
-  .btn {
-    font-size: 18px;
   }
 }

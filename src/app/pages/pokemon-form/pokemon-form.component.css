@@ -30,7 +30,6 @@ form {
 
 .btn {
   margin-top: 40px;
-  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -50,9 +49,5 @@ form {
   
   .sub-heading {
     font-size: 28px;
-  }
-
-  .btn {
-    font-size: 18px;
   }
 }

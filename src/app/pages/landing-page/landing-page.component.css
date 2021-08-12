@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.image {
+  width: 100px;
+  height: 100px;
+}
+
 .main-heading, .sub-heading {
   font-family: "Righteous";
   text-align: center;
@@ -20,11 +25,12 @@
   margin-bottom: 40px;
 }
 
-.btn {
-  font-size: 16px;
-}
-
 @media (min-width: 768px) {
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  
   .main-heading {
     font-size: 32px;
   }
@@ -35,15 +41,16 @@
 }
 
 @media (min-width: 1200px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  
   .main-heading {
     font-size: 36px;
   }
   
   .sub-heading {
     font-size: 30px;
-  }
-
-  .btn {
-    font-size: 18px;
   }
 }
